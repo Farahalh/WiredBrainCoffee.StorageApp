@@ -7,10 +7,9 @@ using WiredBrainCoffee.StorageApp.Entities;
 
 namespace WiredBrainCoffee.StorageApp.Repositories
 {
-    public class GenericRepository<T> where T : class, IEntity
+    public class GenericRepository<T> where T : IEntity
     {
         private readonly List<T> _items = new();
-
         public T GetById(int id)
         {
             return _items.Single(item => item.Id == id);
