@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WiredBrainCoffee.StorageApp.Entities;
+﻿using WiredBrainCoffee.StorageApp.Entities;
 
 namespace WiredBrainCoffee.StorageApp.Repositories
 {
-    public class GenericRepository<T> where T : IEntity
+    public class ListRepository<T> where T : IEntity
     {
         private readonly List<T> _items = new();
         public T GetById(int id)
