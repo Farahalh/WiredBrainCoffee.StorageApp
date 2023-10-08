@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace WiredBrainCoffee.StorageApp.Entities
 {
-    public class Employee
+    public class Employee : EntityBase
     {
-        public int Id { get; set; }
         public string? FirstName { get; set; }
 
         public override string ToString() => $"Id: {Id}, FirstName: {FirstName}";
